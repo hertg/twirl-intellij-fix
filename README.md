@@ -23,6 +23,8 @@ Find and fix twirl templates that were messed up by
 IntelliJ refactoring and code format. Run with '--dry'
 flag first to see changes.
 
+Prints diffs of all changes made to stdout.
+
 positional arguments:
   file        file or directory, defaults to current working dir
 

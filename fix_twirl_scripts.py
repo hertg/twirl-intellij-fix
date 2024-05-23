@@ -129,6 +129,8 @@ if __name__ == "__main__":
             Find and fix twirl templates that were messed up by
             IntelliJ refactoring and code format. Run with '--dry'
             flag first to see changes.
+
+            Prints diffs of all changes made to stdout.
             '''))
     parser.add_argument(
             'file',
