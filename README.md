@@ -6,6 +6,8 @@ for a while, but they still haven't addressed it. I have lost so much time
 manually fixing my twirl views that it granted the investment to create this
 script.
 
+This script is [idempotent](https://en.wikipedia.org/wiki/Idempotence), meaning
+that it should result in the same result, even if applied multiple times.
 
 ## Usage
 
@@ -96,4 +98,7 @@ Then it will reconstruct the view by:
 - add a linebreak
 - add the rest of the content (with all previously found imports, injector, 
 params removed) and stripping empty lines at the beginning
+
+The reason for the linebreaks and the stripped empty lines is to ensure
+an idempotent result.
 
