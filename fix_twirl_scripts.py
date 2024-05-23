@@ -101,8 +101,14 @@ def run(filepath, dry):
             for line in fixed:
                 file.write(line)
 
-    delta = diff(original, fixed, filepath)
-    sys.stdout.writelines(delta)
+    if original != fixed:
+        delta = diff(original, fixed, filepath)
+        sys.stdout.writelines(delta)
+        # add three linebreaks after, so that multiple printed diffs can
+        # be better differentiated. note, this can be split by,
+        # since empty lines in the diff itself are printed with a whitespace
+        # character, not just a line break
+        sys.stdout.write('\n\n\n')
 
 
 def main(filepath, dry):
